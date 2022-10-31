@@ -1,0 +1,14 @@
+.profile-patient{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+mat-checkbox{
+  margin:0 10px 10px 20px;
+}
+.name-btnEditP{
+  margin-top: 200px;
+}
+.img-profile-patient{
+  border-radius: 10px;
+}

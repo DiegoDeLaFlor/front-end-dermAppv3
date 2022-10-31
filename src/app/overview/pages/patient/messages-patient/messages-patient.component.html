@@ -1,0 +1,34 @@
+<section class="messages-patient">
+  <div class="chat-list mat-elevation-z5">
+    <div class="search-input">
+      <mat-form-field>
+        <input matInput placeholder="Search for users" [formControl]="searchControl" [matAutocomplete]="users"/>
+      </mat-form-field>
+      <mat-autocomplete #users= "matAutocomplete">
+        <mat-option *ngFor="let user of users$ | async">{{ user?.firstname }}</mat-option>
+      </mat-autocomplete>
+    </div>
+    <mat-selection-list [multiple]="false">
+      <mat-divider></mat-divider>
+      <mat-list-option *ngFor="let chat of myChats$ | async" [value]="chat.id">
+        <img matListAvatar [src]="chat.chatPic ? chat.chatPic: 'assets/image-placeholder.png'">
+
+        <p mat-line class="chat-title">
+        <span class="chat-name">
+          {{ chat.chatName }}
+        </span>
+        <span class="chat-date">
+          {{ chat.lastMessageDate }}
+        </span>
+        </p>
+        <p mat-line>
+          {{ chat.lastMessage }}
+        </p>
+      </mat-list-option>
+      <!--Remove this options-->
+      <mat-list-option>diego</mat-list-option>
+      <mat-list-option>alonso</mat-list-option>
+    </mat-selection-list>
+  </div>
+  <div class="messages mat-elevation-z5"></div>
+</section>

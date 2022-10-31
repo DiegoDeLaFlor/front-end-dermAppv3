@@ -1,0 +1,20 @@
+.messages-patient{
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.chat-list{
+  width: 40%;
+  margin: 16px;
+  background: #C6BAA3;
+  border-radius: 15px;
+}
+
+.messages{
+  width: 60%;
+  margin: 16px;
+  border-radius: 15px;
+}
+.search-input{
+  margin: 24px;
+}

@@ -1,0 +1,24 @@
+
+<mat-grid-list cols="2" rowHeight="100%" class="background">
+  <mat-grid-tile >
+    <div class="calendar">
+      <mat-card class="demo-inline-calendar-card" >
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+      </mat-card>
+      <p class="date">Date: {{selected}}</p>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div class="Doctor">
+      <h1>Tasks</h1>
+      <mat-nav-list>
+        <mat-list-item *ngFor="let link of horarios">
+          <h4 matLine>{{link.range}}</h4><br>
+          <h4 class="list-tasks" >{{link.patient}}</h4>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list>

@@ -1,0 +1,18 @@
+<mat-grid-list cols="2" rowHeight="100%">
+  <mat-grid-tile >
+    <img src="assets/log_in_background.png" alt="Skin care image">
+
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="login-form">
+      <h1>LOG IN HOW:</h1>
+
+      <div class="buttons">
+        <button mat-button [routerLink]="'/login-patient'" mat-flat-button color="primary">PATIENT</button>
+        <button mat-button [routerLink]="'/login-dermatologist'" mat-raised-button color="primary" >DERMATOLOGIST</button>
+
+      </div>
+    </div>
+  </mat-grid-tile>
+
+</mat-grid-list>
